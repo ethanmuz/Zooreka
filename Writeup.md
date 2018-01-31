@@ -1,4 +1,4 @@
-#Zooreka
+# Zooreka
 
 Zooreka is a board game for kids, created by a popular board game company called Cranium. My goal is to write a program in Java that allows one to play this game, with up to 4 players, over the network.
 
