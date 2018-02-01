@@ -1,6 +1,6 @@
 # Zooreka
 
-#### January 30,2017
+#### January 30, 2017
 
 Zooreka is a board game for kids, created by a popular board game company called Cranium. My goal is to write a program in Java that allows one to play this game, with up to 4 players, over the network.
 
@@ -33,7 +33,7 @@ Those are the basic rules of the game.
 
 Tomorrow I will outline how I expect to implement all this into a Java program.
 
-#### January 31,2017
+#### January 31, 2017
 
 Yesterday, I outlined the basic rules for the board game Zooreka. Today, I plan on outlining how I will implement these rules into my Java game. Because I realize I originally forgot to provide some photos of the Zooreka game for reference, here are some (I apologize for the quality, these are not my images):
 
