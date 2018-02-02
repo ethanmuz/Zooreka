@@ -64,3 +64,35 @@ Those are all the points I wanted to touch on that would be controlled by the se
 However, there are some elements of the game that I plan to dedicate to the client side of the program.
 
 For example, the game's GUI code will all be client-side. I plan to use JavaFX to display all the visual elements for the game. Just like the real-life game, the spaces for the movers will be on the outside, and all the real-time game information (e.g. resource cards, habitats, tip card, etc.) will all be in the middle of the view. I will be using a model-view-controller design pattern, with the view and controller being client-side, while the server keeps the game model.
+
+The last aspect of the program I want to highlight my plans for is how the client and server will communicate with each other.
+
+The server will be the central location for all game activities, as I mentioned earlier. The clients will send strings through a PrintWriter to the server, which will use a BufferedReader to read them, then change the model based on the change. The server will then distribute a change through a PrintWriter to all the players, who then can update their view based on the move that was made.
+
+The following is an example of the communication protocol I plan on implementing into the game:
+
+Server ––> All Players: "1 roll" [Player 1's turn]
+
+Player 1 ––> Server: "1 roll" [Player 1 rolls dice]
+
+*Server rolls dice: 4 and food; Server moves Player 1 four spaces and gives everyone who's selection token is on food a food resource card*
+
+Server ––> All Players: "1 roll 4 food[24]" [Player 1 rolls a 4 and food resource, so Players 2 and 4 each get a food card]
+
+*Player 1 lands on Blue Skies: Server draws Blue Skies card and applies it to Player 1: "Gain 2 food cards"*
+
+Server ––> All Players: "1 BS[2f]"
+
+*Clients add 2 food cards to Player 1's resources according to Blue Skies card*
+
+Player 1 ––> Server: "end" [Player 1 ends turn]
+
+*Server changes currentPlayer to 2*
+
+Server ––> All Players: "2 roll" [Player 2's turn]
+
+This is how the clients and server in my game will communicate.
+
+I am pretty sure I outlined everything so far that I want to before I begin writing code. If there is anything more I want to add, you will see it in the future writeups. Also, if there is anything I plan on editing that has already been written, I will edit it and leave a comment at the bottom of that day's writeup, noting what was changed, and when and why it was modified.
+
+Tomorrow, unless I think of more planning that I need to do, I will probably begin to write the code for the game, starting with file structure setup and then probably writing the Player class on the Server side.
