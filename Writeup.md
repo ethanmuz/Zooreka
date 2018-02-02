@@ -58,3 +58,9 @@ I mentioned earlier that I plan on keeping most of the game data server-side, so
 The game server will also handle distribution of Blue Skies and Stormy Weather cards. These are cards that affect your game in its current state, as in "gain 3 food cards" or "if you have more than 3 animal cards, lose 2". I plan to just have a BlueSkies and StormyWeather class that have ArrayLists with all card possibilities, so that when a player lands on one of these spaces, a random card will be drawn and the change will affect the user.
 
 The server will also be responsible for handling the TeamUp events. The TeamUp occurs when someone lands on the TeamUp space. When this happens, every player rolls the resource dice, and whoever rolls the same as the original roller, earns one of that resource for themself and the original roller. I am going to have a method for TeamUp that handles all of this on the server side.
+
+Those are all the points I wanted to touch on that would be controlled by the server.
+
+However, there are some elements of the game that I plan to dedicate to the client side of the program.
+
+For example, the game's GUI code will all be client-side. I plan to use JavaFX to display all the visual elements for the game. Just like the real-life game, the spaces for the movers will be on the outside, and all the real-time game information (e.g. resource cards, habitats, tip card, etc.) will all be in the middle of the view. I will be using a model-view-controller design pattern, with the view and controller being client-side, while the server keeps the game model.
