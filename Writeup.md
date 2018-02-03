@@ -202,4 +202,16 @@ public void changeResources(int food, int animal, int shelter, int habitats){
  }
 ```
 
-This method is much better than having individual setters for each value.
+This method is much better than having individual setters for each value. Now I am going to write the setters––that's right, plural––for keeperCards. These will only ever increase or decrease in increments of 1, I am just going to have an addKeeperCard() method that adds one keeper card, and a subtractKeeperCard() method that subtracts one keeper card, if the Player has one. Here is the code:
+
+```java
+public void addKeeperCard(){
+    this.keeperCards++;
+}
+
+//Subtracts one keeper card, if it can
+public void subtractKeeperCard(){
+    if (this.getKeeperCards() > 0)  //Checks to see if you can even subtract one
+        this.keeperCards--;
+}
+```
