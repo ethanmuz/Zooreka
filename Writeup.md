@@ -175,3 +175,31 @@ public String getLuckySelection() {
     return this.luckySelection; //Returns the lucky resource this Player has selected (if one; as a String "food", "animal", or "shelter")
 }
 ```
+
+Now all my getters are coded, and I'm ready to begin writing my setters. However, I am not going to write the setters for the resources and habitats as you'd expect. I am going to write a changeResources method that takes int parameters for food, animal, and shelter cards and habitats. The reason for this is I want to change the amount of resources a player has, I usually want to modify more than one type of resource. This occurs in trading, and in many Blue Skies and Stormy Weather cards. Here is what it is going to look like:
+
+```java
+/**
+ * Changes the number of resources this player has, based on parameters
+ * Does not let a player have a negative number of resource cards/habitats, naturally
+ * 
+ * @param food Number of food cards to be added (-subtracted) from this Player
+ * @param animal Number of animal cards to be added (-subtracted) from this Player
+ * @param shelter Number of shelter cards to be added (-subtracted) from this Player
+ * @param habitats Number of habitats to be added (-subtracted) from this Player
+ */
+public void changeResources(int food, int animal, int shelter, int habitats){
+    if(((this.getFood() + food) >= 0)
+    && ((this.getAnimalCards() + animal) >= 0)      //Checks to see if this move is valid (i.e. doesn't let the player
+    && ((this.getShelterCards() + shelter) >= 0)    //have negative values)
+    && ((this.getHabitats() + habitats) >= 0) )
+    {
+        this.foodCards += food;             //Applies the change to all resources
+        this.animalCards += animal;
+        this.shelterCards += shelter;
+        this.habitatsEarned += habitats;
+    }
+ }
+```
+
+This method is much better than having individual setters for each value.
