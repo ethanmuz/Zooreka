@@ -100,12 +100,14 @@ public class Player {
 
     }
 
+    //Adds one keeper card
     public void addKeeperCard(){
         this.keeperCards++;
     }
 
+    //Subtracts one keeper card, if it can
     public void subtractKeeperCard(){
-        if (this.getKeeperCards() > 0)
+        if (this.getKeeperCards() > 0)  //Checks to see if you can even subtract one
             this.keeperCards--;
     }
 
