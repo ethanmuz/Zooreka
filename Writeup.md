@@ -130,3 +130,14 @@ The rules of the game state that a player starts out with 2 food cards, an anima
 Here I built the constructor, and did some other things too, like comment the instance variables, and make them private too:
 
 ![Built constructor](https://ethanmuz.files.wordpress.com/2018/02/s5.png "Built constructor")
+
+I am going to now write the methods for the player class. The first method I want to write is the getter for the Player ID, a.k.a a function that returns the 
+player's ID.
+
+```java
+public int getID(){
+    return this.playerID; //Returns this Player's ID number
+}
+```
+
+Simple function that supplies the Player's ID.
