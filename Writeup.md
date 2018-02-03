@@ -96,3 +96,19 @@ This is how the clients and server in my game will communicate.
 I am pretty sure I outlined everything so far that I want to before I begin writing code. If there is anything more I want to add, you will see it in the future writeups. Also, if there is anything I plan on editing that has already been written, I will edit it and leave a comment at the bottom of that day's writeup, noting what was changed, and when and why it was modified.
 
 Tomorrow, unless I think of more planning that I need to do, I will probably begin to write the code for the game, starting with file structure setup and then probably writing the Player class on the Server side.
+
+#### February 2, 2018
+
+I have outlined the basic rules and gameplay of the family board game "Zooreka", and I explained how I intend to turn this game into a Java program. It is time to start writing code to put this into effect.
+
+For this program, I will be using IntelliJ IDEA to develop. I began by creating a new project. I already had a Zooreka project folder, because that's where I saved my Writeup.md that I keep a daily log for so I can have this information in the GitHub repo.
+
+![Create new Project](https://ethanmuz.files.wordpress.com/2018/02/s1.png "Create new Project")
+
+It's time to set up my file structure for the server and client. Initially, I am going to just create a 'server' and 'client' folder inside my 'src' folder so that I can keep the classes I am working on separate. 
+
+![Initial file structure](https://ethanmuz.files.wordpress.com/2018/02/s.png "Initial file structure")
+
+I then began with the class that I planned to start with, the Player class on the server side. This will hold most of the game data for gameplay. Most of the game is built upon ownership of resources and habitats, and also the earning/trading of these items. Dynamic player data will all be handled in this class, so it is an important class to write before writing the shell for modifying the data.
+
+![Created Player class](https://ethanmuz.files.wordpress.com/2018/02/s3.png "Created Player class")
