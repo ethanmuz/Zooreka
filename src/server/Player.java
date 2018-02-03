@@ -15,7 +15,11 @@ public class Player {
     private boolean luckyDay; //Whether or not it is this player's "lucky day", that is whether or not they possess the lucky token.
     private int playerID; //Player number used for ID purposes
 
-
+    /**
+     * Constructor for Player
+     *
+     * @param id Server tells this Player what its Player ID number is
+     */
     public Player(int id){
         this.playerID = id; //Assign player ID to the ID passed in by server
         this.foodCards = 2; //The rules say each player starts with 2 food cards
@@ -25,6 +29,10 @@ public class Player {
         this.keeperCards = 0;  //No player starts with keeper cards
         this.luckyDay = false; this.luckySelection = null;  //No player starts with Lucky Day
 
+    }
+
+    public int getID(){
+        return this.playerID; //Returns this Player's ID number
     }
 
 }
