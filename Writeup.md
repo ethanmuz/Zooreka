@@ -215,3 +215,27 @@ public void subtractKeeperCard(){
         this.keeperCards--;
 }
 ```
+
+Then the rest of the setters should be standard:
+
+```java
+//Sets selection
+public void setSelection(String s){
+    this.selection = s;
+}
+
+//Sets luckySelection
+public void setLuckySelection(String l){
+    this.luckySelection = l;
+}
+
+//Sets luckyDay
+public void setLuckyDay(boolean l){
+    this.luckyDay = l;
+}
+
+//Sets player ID; only use when player leaves game lobby
+public void setPlayerID(int id){
+    this.playerID = id;
+}
+```
