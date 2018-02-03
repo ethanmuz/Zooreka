@@ -112,3 +112,7 @@ It's time to set up my file structure for the server and client. Initially, I am
 I then began with the class that I planned to start with, the Player class on the server side. This will hold most of the game data for gameplay. Most of the game is built upon ownership of resources and habitats, and also the earning/trading of these items. Dynamic player data will all be handled in this class, so it is an important class to write before writing the shell for modifying the data.
 
 ![Created Player class](https://ethanmuz.files.wordpress.com/2018/02/s3.png "Created Player class")
+
+Now I am going to fill my Player class up with all the instance variables needed for the game (that I know of so far, of course). These have pretty much all been mentioned before in my writeup when I discussed my plan for the Player class (which is the reason for a plan in the first place I guess).
+
+![Declared some instance variables](https://ethanmuz.files.wordpress.com/2018/02/s4.png "Declared some instance variables")
