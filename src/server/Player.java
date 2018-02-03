@@ -32,41 +32,72 @@ public class Player {
 
     }
 
+    //Returns this Player's ID number
     public int getID() {
-        return this.playerID; //Returns this Player's ID number
+        return this.playerID;
     }
 
+    //Returns number of food cards this Player has
     public int getFood() {
-        return this.foodCards; //Returns number of food cards this Player has
+        return this.foodCards;
     }
 
+    //Returns number of animal cards this Player has
     public int getAnimalCards() {
-        return this.animalCards; //Returns number of animal cards this Player has
+        return this.animalCards;
     }
 
+    //Returns number of shelter cards this Player has
     public int getShelterCards() {
-        return this.shelterCards; //Returns number of shelter cards this Player has
+        return this.shelterCards;
     }
 
+    //Returns number of habitats this Player has
     public int getHabitats() {
-        return this.habitatsEarned; //Returns number of habitats this Player has
+        return this.habitatsEarned;
     }
 
+    //Returns number of keeper cards this Player has
     public int getKeeperCards() {
-        return this.keeperCards; //Returns number of keeper cards this Player has
+        return this.keeperCards;
     }
 
+    //Returns the resource this Player has selected (as a String "food", "animal", or "shelter")
     public String getSelection() {
-        return this.selection; //Returns the resource this Player has selected (as a String "food", "animal", or "shelter")
+        return this.selection;
     }
 
+    //Returns whether or not it is this Player's lucky day
     public boolean isLuckyDay() {
-        return this.luckyDay; //Returns whether or not it is this Player's lucky day
+        return this.luckyDay;
     }
 
+    //Returns the lucky resource this Player has selected (if one; as a String "food", "animal", or "shelter")
     public String getLuckySelection() {
-        return this.luckySelection; //Returns the lucky resource this Player has selected (if one; as a String "food", "animal", or "shelter")
+        return this.luckySelection;
     }
 
+    /**
+     * Changes the number of resources this player has, based on parameters
+     * Does not let a player have a negative number of resource cards/habitats, naturally
+     *
+     * @param food Number of food cards to be added (-subtracted) from this Player
+     * @param animal Number of animal cards to be added (-subtracted) from this Player
+     * @param shelter Number of shelter cards to be added (-subtracted) from this Player
+     * @param habitats Number of habitats to be added (-subtracted) from this Player
+     */
+    public void changeResources(int food, int animal, int shelter, int habitats){
+        if(((this.getFood() + food) >= 0)
+        && ((this.getAnimalCards() + animal) >= 0)      //Checks to see if this move is valid (i.e. doesn't let the player
+        && ((this.getShelterCards() + shelter) >= 0)    //have negative values)
+        && ((this.getHabitats() + habitats) >= 0) )
+        {
+            this.foodCards += food;             //Applies the change to all resources
+            this.animalCards += animal;
+            this.shelterCards += shelter;
+            this.habitatsEarned += habitats;
+        }
+
+    }
 
 }
