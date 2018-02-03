@@ -140,4 +140,38 @@ public int getID(){
 }
 ```
 
-Simple function that supplies the Player's ID.
+Simple function that supplies the Player's ID. Now I am going to add the getters for the resource cards, habitats, keeper cards, resource selection, and lucky day token and selection:
+
+```java
+public int getFood() {
+    return this.foodCards; //Returns number of food cards this Player has
+}
+
+public int getAnimalCards() {
+    return this.animalCards; //Returns number of animal cards this Player has
+}
+
+public int getShelterCards() {
+    return this.shelterCards; //Returns number of shelter cards this Player has
+}
+
+public int getHabitats() {
+    return this.habitatsEarned; //Returns number of habitats this Player has
+}
+
+public int getKeeperCards() {
+    return this.keeperCards; //Returns number of keeper cards this Player has
+}
+
+public String getSelection() {
+    return this.selection; //Returns the resource this Player has selected (as a String "food", "animal", or "shelter")
+}
+
+public boolean isLuckyDay() {
+    return this.luckyDay; //Returns whether or not it is this Player's lucky day
+}
+
+public String getLuckySelection() {
+    return this.luckySelection; //Returns the lucky resource this Player has selected (if one; as a String "food", "animal", or "shelter")
+}
+```
