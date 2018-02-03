@@ -126,3 +126,7 @@ Also, I currently have 'playerColor' as a String, but in the future I may have t
 Now, it is time to write the constructor for Player. This should not be difficult, because we know almost all the starting values except playerID (which will be assigned when the client joins the server), and their resource selections. It would be awkward to have the players decide which resource selection they want in the server lobby, so I may just force all the players to choose right before the first dice roll of the game.
 
 The rules of the game state that a player starts out with 2 food cards, an animal card, and an initial selection token. I will set these variables accordingly, and the rest of the variables will be empty. For example, 'shelterCards', 'habitatsEarned', and 'keeperCards' will equal 0, while luckySelection will be null, and luckyDay will be false.
+
+Here I built the constructor, and did some other things too, like comment the instance variables, and make them private too:
+
+![Built constructor](https://ethanmuz.files.wordpress.com/2018/02/s5.png "Built constructor")
