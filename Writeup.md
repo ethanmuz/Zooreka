@@ -116,3 +116,5 @@ I then began with the class that I planned to start with, the Player class on th
 Now I am going to fill my Player class up with all the instance variables needed for the game (that I know of so far, of course). These have pretty much all been mentioned before in my writeup when I discussed my plan for the Player class (which is the reason for a plan in the first place I guess).
 
 ![Declared some instance variables](https://ethanmuz.files.wordpress.com/2018/02/s4.png "Declared some instance variables")
+
+So while creating these fields, I realized that I haven't decided how am I going to implement the player's mover objects on the board. I am going to make a temporary decision that it will be part of the GUI, and that the client will just tell the server what space they land on, without the server concerning itself with which space the player is inhabiting on the board.
