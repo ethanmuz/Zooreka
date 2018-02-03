@@ -100,4 +100,13 @@ public class Player {
 
     }
 
+    public void addKeeperCard(){
+        this.keeperCards++;
+    }
+
+    public void subtractKeeperCard(){
+        if (this.getKeeperCards() > 0)
+            this.keeperCards--;
+    }
+
 }
