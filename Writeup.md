@@ -239,3 +239,7 @@ public void setPlayerID(int id){
     this.playerID = id;
 }
 ```
+
+That should be the conclusion of the Player class...for right now. There might be some things to add later on.
+
+My current plan for tomorrow is to start writing the server GUI, and if I have time, some of the game actions that the client commands. But the Joywave concert at RIT is tomorrow, so we'll see how much time I have.
