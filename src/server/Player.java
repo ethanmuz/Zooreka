@@ -81,17 +81,16 @@ public class Player {
      * Changes the number of resources this player has, based on parameters
      * Does not let a player have a negative number of resource cards/habitats, naturally
      *
-     * @param food Number of food cards to be added (-subtracted) from this Player
-     * @param animal Number of animal cards to be added (-subtracted) from this Player
-     * @param shelter Number of shelter cards to be added (-subtracted) from this Player
+     * @param food     Number of food cards to be added (-subtracted) from this Player
+     * @param animal   Number of animal cards to be added (-subtracted) from this Player
+     * @param shelter  Number of shelter cards to be added (-subtracted) from this Player
      * @param habitats Number of habitats to be added (-subtracted) from this Player
      */
-    public void changeResources(int food, int animal, int shelter, int habitats){
-        if(((this.getFood() + food) >= 0)
-        && ((this.getAnimalCards() + animal) >= 0)      //Checks to see if this move is valid (i.e. doesn't let the player
-        && ((this.getShelterCards() + shelter) >= 0)    //have negative values)
-        && ((this.getHabitats() + habitats) >= 0) )
-        {
+    public void changeResources(int food, int animal, int shelter, int habitats) {
+        if (((this.getFood() + food) >= 0)
+                && ((this.getAnimalCards() + animal) >= 0)      //Checks to see if this move is valid (i.e. doesn't let the player
+                && ((this.getShelterCards() + shelter) >= 0)    //have negative values)
+                && ((this.getHabitats() + habitats) >= 0)) {
             this.foodCards += food;             //Applies the change to all resources
             this.animalCards += animal;
             this.shelterCards += shelter;
@@ -101,33 +100,33 @@ public class Player {
     }
 
     //Adds one keeper card
-    public void addKeeperCard(){
+    public void addKeeperCard() {
         this.keeperCards++;
     }
 
     //Subtracts one keeper card, if it can
-    public void subtractKeeperCard(){
+    public void subtractKeeperCard() {
         if (this.getKeeperCards() > 0)  //Checks to see if you can even subtract one
             this.keeperCards--;
     }
 
     //Sets selection
-    public void setSelection(String s){
+    public void setSelection(String s) {
         this.selection = s;
     }
 
     //Sets luckySelection
-    public void setLuckySelection(String l){
+    public void setLuckySelection(String l) {
         this.luckySelection = l;
     }
 
     //Sets luckyDay
-    public void setLuckyDay(boolean l){
+    public void setLuckyDay(boolean l) {
         this.luckyDay = l;
     }
 
     //Sets player ID; only use when player leaves game lobby
-    public void setPlayerID(int id){
+    public void setPlayerID(int id) {
         this.playerID = id;
     }
 
