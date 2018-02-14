@@ -2,15 +2,18 @@ package server;
 
 import java.util.*;
 
-public class Server {
+public class Game {
+
+    private ArrayList<Player> players; //ArrayList that contains all current Players
 
     /**
      * Chooses a random Blue Skies card and applies it to the given Player
      *
      * @param player Indicates the Player that these cards will be affecting
      */
-    public void BlueSkies(Player player){
-        Random random = new Random(); int card = random.nextInt(9);
+    public void BlueSkies(Player player) {
+        Random random = new Random();
+        int card = random.nextInt(9);
         switch (card) {
             case 0:
                 player.addKeeperCard(); //Player draws a 'keeper' Blue Skies card
@@ -47,8 +50,9 @@ public class Server {
      *
      * @param player Indicates the Player that these cards will be affecting
      */
-    public void StormyWeather(Player player){
-        Random random = new Random(); int card = random.nextInt(7);
+    public void StormyWeather(Player player) {
+        Random random = new Random();
+        int card = random.nextInt(7);
         switch (card) {
             case 0:
                 player.changeResources(-1, -2, 0, 0); //Player's Stormy Weather card takes away two animal cards and one food card
@@ -71,6 +75,18 @@ public class Server {
             case 6:
                 player.changeResources(-1, 0, 0, 0); //Player's Stormy Weather card takes away one food card
                 break;
+        }
+    }
+
+    public void luckyDay(Player player, String selection) {
+        for (Player p : players) {
+            if (p == player) {
+                p.setLuckyDay(true);
+                p.setLuckySelection(selection);
+            } else {
+                p.setLuckyDay(false);
+                p.setLuckySelection(null);
+            }
         }
     }
 }
