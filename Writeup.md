@@ -243,3 +243,9 @@ public void setPlayerID(int id){
 That should be the conclusion of the Player class...for right now. There might be some things to add later on.
 
 My current plan for tomorrow is to start writing the server GUI, and if I have time, some of the game actions that the client commands. But the Joywave concert at RIT is tomorrow, so we'll see how much time I have.
+
+#### February 13, 2018
+
+I know I haven't worked on this in a while, I've been pretty bogged down with schoolwork recently. Now I'm back, so I should be able to get a lot of this project done in the near future.
+
+Today I want to get as much of the server done as possible. Unlike the Player class, I am going to write the methods and instance variables as I go for each feature the Server will have. The Player class has structure that was defined already in the game's rules, and it was mostly just going to hold Player data with minimal moving parts. Since the Server is going to be running with more complex methods, it is better to add the fields and methods as I go because they are going to change as I implement more features.
