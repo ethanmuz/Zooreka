@@ -4,6 +4,11 @@ import java.util.*;
 
 public class Server {
 
+    /**
+     * Chooses a random Blue Skies card and applies it to the given Player
+     *
+     * @param player Indicates the Player that these cards will be affecting
+     */
     public void BlueSkies(Player player){
         Random random = new Random(); int card = random.nextInt(9);
         switch (card) {
@@ -37,6 +42,11 @@ public class Server {
         }
     }
 
+    /**
+     * Chooses a random Stormy Weather card and applies it to the given Player
+     *
+     * @param player Indicates the Player that these cards will be affecting
+     */
     public void StormyWeather(Player player){
         Random random = new Random(); int card = random.nextInt(7);
         switch (card) {
