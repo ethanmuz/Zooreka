@@ -250,4 +250,46 @@ I know I haven't worked on this in a while, I've been pretty bogged down with sc
 
 Today I want to get as much of the server done as possible. Unlike the Player class, I am going to write the methods and instance variables as I go for each feature the Server will have. The Player class has structure that was defined already in the game's rules, and it was mostly just going to hold Player data with minimal moving parts. Since the Server is going to be running with more complex methods, it is better to add the fields and methods as I go because they are going to change as I implement more features.
 
+To start, I am going to create the Server class in my project structure. Obviously, the Server class will go in the server package, as so:
+
+![Added Server to project structure](https://ethanmuz.files.wordpress.com/2018/02/s6.png "Added Server to project structure")
+
+The first features I want to implement are Blue Skies and Stormy Weather. Each of these can have their own methods, that take a Player and randomly assign resource cards, based on what "card" was drawn, to their instance of the Player class.
+
+As written, the Blue Skies method does exactly this; here is the code:
+
+```java
+public void BlueSkies(Player player){
+    Random random = new Random(); int card = random.nextInt(9);
+    switch (card) {
+        case 0:
+            player.addKeeperCard(); //Player draws a 'keeper' Blue Skies card
+            break;
+        case 1:
+            player.changeResources(0, 0, 1, 0); //Player's Blue Skies card gives them one shelter card
+            break;
+        case 2:
+            player.changeResources(2, 2, 0, 0); //Player's Blue Skies card gives them two animal cards and two food cards
+            break;
+        case 3:
+            player.changeResources(1, 2, 0, 0); //Player's Blue Skies card gives them two animal cards and one food card
+            break;
+        case 4:
+            player.changeResources(0, 2, 0, 0); //Player's Blue Skies card gives them two animal cards
+            break;
+        case 5:
+            player.changeResources(3, 1, 0, 0); //Player's Blue Skies card gives them one animal card and three food cards
+            break;
+        case 6:
+            player.changeResources(2, 1, 0, 0); //Player's Blue Skies card gives them one animal card and two food cards
+            break;
+        case 7:
+            player.changeResources(1, 1, 0, 0); //Player's Blue Skies card gives them one animal card and one food card
+            break;
+        case 8:
+            player.changeResources(3, 0, 0, 0); //Player's Blue Skies card gives them three food cards
+            break;
+    }
+}
+```
 
