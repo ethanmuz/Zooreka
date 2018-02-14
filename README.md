@@ -1,6 +1,6 @@
 # Zooreka
 
-This game is currently **in development**. For now, please see [the Writeup)(/master/Writeup.md) which will provide insight into the development process for this game.
+This game is currently **in development**. For now, please see [the Writeup](/master/Writeup.md) which will provide insight into the development process for this game.
 
 #### Contact the developer
 
