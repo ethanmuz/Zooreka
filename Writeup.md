@@ -340,11 +340,11 @@ Here is the luckyDay method's code:
 public void luckyDay(Player player, String selection) {
     for (Player p : players) {
         if (p == player) {
-            p.setLuckyDay(true);
-            p.setLuckySelection(selection);
-        } else {
-            p.setLuckyDay(false);
-            p.setLuckySelection(null);
+            p.setLuckyDay(true); //Gives current Player 'Lucky Day'
+            p.setLuckySelection(selection); //Sets the Player's Lucky Day selection
+            } else {
+            p.setLuckyDay(false);       //Removes any other Player's Lucky Day
+            p.setLuckySelection(null);  //and sets their selection to null
         }
     }
 }

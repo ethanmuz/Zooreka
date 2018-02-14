@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcd90d20-d3a8-4a36-a3af-2df6888f20af" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/server/Game.java" afterPath="$PROJECT_DIR$/src/server/Game.java" />
+      <change beforePath="$PROJECT_DIR$/Writeup.md" afterPath="$PROJECT_DIR$/Writeup.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,21 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+            <state relative-caret-position="426">
+              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="93" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Writeup.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Writeup.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Writeup.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4930">
-              <caret line="43" column="59" lean-forward="false" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="59" />
+            <state relative-caret-position="596">
+              <caret line="350" column="3" lean-forward="true" selection-start-line="350" selection-start-column="3" selection-end-line="350" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -91,8 +90,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/server/Server.java" />
         <option value="$PROJECT_DIR$/src/server/Player.java" />
-        <option value="$PROJECT_DIR$/Writeup.md" />
         <option value="$PROJECT_DIR$/src/server/Game.java" />
+        <option value="$PROJECT_DIR$/Writeup.md" />
       </list>
     </option>
   </component>
@@ -408,18 +407,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Writeup.md">
+    <entry file="file://$PROJECT_DIR$/src/server/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4930">
-          <caret line="43" column="59" lean-forward="false" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="59" />
+        <state relative-caret-position="426">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="93" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Game.java">
+    <entry file="file://$PROJECT_DIR$/Writeup.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+        <state relative-caret-position="596">
+          <caret line="350" column="3" lean-forward="true" selection-start-line="350" selection-start-column="3" selection-end-line="350" selection-end-column="3" />
           <folding />
         </state>
       </provider>
