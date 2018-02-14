@@ -2,7 +2,7 @@
 
 This game is currently **in development**. For now, please see [the Writeup](/Writeup.md) which will provide insight into the development process for this game.
 
-#### Contact the developer
+#### Contact the developer:
 
 Ethan Uzarowski (ethanmuz@gmail.com)
 
