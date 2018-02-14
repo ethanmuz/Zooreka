@@ -293,3 +293,36 @@ public void BlueSkies(Player player){
 }
 ```
 
+I want to do the same thing with the Stormy Weather, however I obviously do not want the Player to be able to have negative resource values. If you recall, we fixed this in the changeResources method so that this was impossible. This way, I can do the same thing as Blue Skies method except make the parameter values negative, which subtracts resources from the Player, as long as they will not have negative values. This is the same way the Stormy Weather cards are implemented into the board game as well.
+
+Here is the code for Stormy Weather method:
+
+```java
+public void StormyWeather(Player player){
+    Random random = new Random(); int card = random.nextInt(7);
+    switch (card) {
+        case 0:
+            player.changeResources(-1, -2, 0, 0); //Player's Stormy Weather card takes away two animal cards and one food card
+            break;
+        case 1:
+            player.changeResources(0, -2, 0, 0); //Player's Stormy Weather card takes away two animal cards
+            break;
+        case 2:
+            player.changeResources(-2, -1, 0, 0); //Player's Stormy Weather card takes away one animal card and two food cards
+            break;
+        case 3:
+            player.changeResources(-1, -1, 0, 0); //Player's Stormy Weather card takes away one animal card and one food card
+            break;
+        case 4:
+            player.changeResources(-3, 0, 0, 0); //Player's Stormy Weather card takes away three food cards
+            break;
+        case 5:
+            player.changeResources(-2, 0, 0, 0); //Player's Stormy Weather card takes away two food cards
+            break;
+        case 6:
+            player.changeResources(-1, 0, 0, 0); //Player's Stormy Weather card takes away one food card
+            break;
+    }
+}
+```
+
