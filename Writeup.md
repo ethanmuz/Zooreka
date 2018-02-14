@@ -250,9 +250,9 @@ I know I haven't worked on this in a while, I've been pretty bogged down with sc
 
 Today I want to get as much of the server done as possible. Unlike the Player class, I am going to write the methods and instance variables as I go for each feature the Server will have. The Player class has structure that was defined already in the game's rules, and it was mostly just going to hold Player data with minimal moving parts. Since the Server is going to be running with more complex methods, it is better to add the fields and methods as I go because they are going to change as I implement more features.
 
-To start, I am going to create the Server class in my project structure. Obviously, the Server class will go in the server package, as so:
+To start, I am going to create the Game class in my project structure. Obviously, the Game class will go in the server package, as so:
 
-![Added Server to project structure](https://ethanmuz.files.wordpress.com/2018/02/s6.png "Added Server to project structure")
+![Added Server to project structure](https://ethanmuz.files.wordpress.com/2018/02/s7.png "Added Server to project structure")
 
 The first features I want to implement are Blue Skies and Stormy Weather. Each of these can have their own methods, that take a Player and randomly assign resource cards, based on what "card" was drawn, to their instance of the Player class.
 
@@ -326,3 +326,26 @@ public void StormyWeather(Player player){
 }
 ```
 
+Now that the Blue Skies and Stormy Weather methods are written, I want to write the Lucky Day method. The way this will work is that the Player will pick a resource selection for their Lucky Token, then the method I write will accept the Player and selection as parameters. The method will remove the Lucky Token from any other player who has it (if anyone has it) and give the Player the lucky token, along with applying their lucky selection. Keep in mind this will only happen if the Player does not currently have Lucky Day.
+
+To do this, I will have to create the ArrayList of Players in the Game class, so I can iterate it in the luckyDay method. I added this as an instance variable (so far the only one):
+
+```java
+private ArrayList<Player> players; //ArrayList that contains all current Players
+```
+
+Here is the luckyDay method's code:
+
+```java
+public void luckyDay(Player player, String selection) {
+    for (Player p : players) {
+        if (p == player) {
+            p.setLuckyDay(true);
+            p.setLuckySelection(selection);
+        } else {
+            p.setLuckyDay(false);
+            p.setLuckySelection(null);
+        }
+    }
+}
+```
