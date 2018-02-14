@@ -78,14 +78,20 @@ public class Game {
         }
     }
 
+    /**
+     * Activates a Player's Lucky Day, while also removing it from any other Player who may have it
+     *
+     * @param player
+     * @param selection
+     */
     public void luckyDay(Player player, String selection) {
         for (Player p : players) {
             if (p == player) {
-                p.setLuckyDay(true);
-                p.setLuckySelection(selection);
+                p.setLuckyDay(true); //Gives current Player 'Lucky Day'
+                p.setLuckySelection(selection); //Sets the Player's Lucky Day selection
             } else {
-                p.setLuckyDay(false);
-                p.setLuckySelection(null);
+                p.setLuckyDay(false);       //Removes any other Player's Lucky Day
+                p.setLuckySelection(null);  //and sets their selection to null
             }
         }
     }
