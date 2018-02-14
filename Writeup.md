@@ -349,3 +349,5 @@ public void luckyDay(Player player, String selection) {
     }
 }
 ```
+
+That's all I wanted to get done tonight. Tomorrow I should work on a couple more game features, and I might start implementing the protocol that the server and client will use to communicate with each other.
