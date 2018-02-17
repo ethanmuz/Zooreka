@@ -2,6 +2,9 @@ package server;
 
 import java.util.*;
 
+/**
+ * @author Ethan Uzarowski ethanmuz@gmail.com github.com/ethanmuz
+ */
 public class Game {
 
     private ArrayList<Player> players; //ArrayList that contains all current Players

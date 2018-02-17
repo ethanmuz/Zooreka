@@ -2,6 +2,9 @@ package server;
 
 import java.util.ArrayList;
 
+/**
+ * @author Ethan Uzarowski ethanmuz@gmail.com github.com/ethanmuz
+ */
 public class Player {
 
     //String playerColor; //???
