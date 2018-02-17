@@ -8,6 +8,7 @@ import java.util.*;
 public class Game {
 
     private ArrayList<Player> players; //ArrayList that contains all current Players
+    private int currentPlayer; //Integer representing the Player who's turn it is
 
     /**
      * Chooses a random Blue Skies card and applies it to the given Player

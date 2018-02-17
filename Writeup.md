@@ -21,7 +21,7 @@ These are the basic rules of how to play the board game. However, playing on the
   1. Lucky Day: gives the player whose turn it is an extra selection token to increase resource yield
   2. Blue Skies: the player draws a Blue Skies card, which usually helps their situation in the game
   3. Stormy Weather: the player draws a Stormy Weather card, which usually hurts their situation in the game
-  4. Team Up: all players roll the resource dice, and each player who matches the original roller earns one of that resource for them and the original roller
+  4. Team Up: all players roll the resource die, and each player who matches the original roller earns one of that resource for them and the original roller
   5. Roll Again: The player rolls again
   6. Trading Post: The player may exchange resources for other resources (forward or backward) in the ratios they see on the tip cards:
      - 1 Animal card = 3 Food cards
@@ -351,3 +351,15 @@ public void luckyDay(Player player, String selection) {
 ```
 
 That's all I wanted to get done tonight. Tomorrow I should work on a couple more game features, and I might start implementing the protocol that the server and client will use to communicate with each other.
+
+#### February 17-18, 2018
+
+So tonight is a hackathon, so I want to work on this project as much as I can for a while.
+
+Right now I want to implement a feature or two into the Game class, and then set up a communication protocol between the server and client.
+
+The Game class is still missing a method for the TeamUp aspect of the game, so first I am going to try to add that. As mentioned earlier, TeamUp is an event in the game where every player rolls the resource die, and every player who's roll matches that of the player who's turn it is, earns one of that resource for them and the player who's turn it is. This is going to be a little awkward to implement at first, because this relies on some game features that I don't have yet. Initially, I have to create a new instance variable that keeps track of who's turn it is. I added the follow field to my Game class:
+
+```java
+private int currentPlayer; //Integer representing the Player who's turn it is
+```
