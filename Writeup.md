@@ -363,3 +363,15 @@ The Game class is still missing a method for the TeamUp aspect of the game, so f
 ```java
 private int currentPlayer; //Integer representing the Player whose turn it is
 ```
+
+Also, I need to methods to the server that rolls the dice. The reason that the dice rolling is server-side is that it will be quicker in-game to just have the server roll the dice and distribute the number/resource to all players, rather than have a player roll the dice, and send it back to the server, then have the server distribute the roll to the rest of the players.
+
+The dice roll methods will be super simple. The number die method will simply return a random number 1-6 (inclusive). Here is that code:
+
+```java
+public int rollDie(){
+    Random random = new Random();
+    int roll = random.nextInt(6) + 1; //Random number 1-6 (inclusive)
+    return roll;
+}
+```
