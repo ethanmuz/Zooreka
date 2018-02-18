@@ -99,4 +99,15 @@ public class Game {
             }
         }
     }
+
+    /**
+     * Rolls a virtual dice (1-6) and returns the value
+     *
+     * @return dice roll
+     */
+    public int rollDie(){
+        Random random = new Random();
+        int roll = random.nextInt(6) + 1; //Random number 1-6 (inclusive)
+        return roll;
+    }
 }

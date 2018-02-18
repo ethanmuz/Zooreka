@@ -75,7 +75,7 @@ Server ––> All Players: "1 roll" [Player 1's turn]
 
 Player 1 ––> Server: "1 roll" [Player 1 rolls dice]
 
-*Server rolls dice: 4 and food; Server moves Player 1 four spaces and gives everyone who's selection token is on food a food resource card*
+*Server rolls dice: 4 and food; Server moves Player 1 four spaces and gives everyone whose selection token is on food a food resource card*
 
 Server ––> All Players: "1 roll 4 food[24]" [Player 1 rolls a 4 and food resource, so Players 2 and 4 each get a food card]
 
@@ -358,8 +358,8 @@ So tonight is a hackathon, so I want to work on this project as much as I can fo
 
 Right now I want to implement a feature or two into the Game class, and then set up a communication protocol between the server and client.
 
-The Game class is still missing a method for the TeamUp aspect of the game, so first I am going to try to add that. As mentioned earlier, TeamUp is an event in the game where every player rolls the resource die, and every player who's roll matches that of the player who's turn it is, earns one of that resource for them and the player who's turn it is. This is going to be a little awkward to implement at first, because this relies on some game features that I don't have yet. Initially, I have to create a new instance variable that keeps track of who's turn it is. I added the follow field to my Game class:
+The Game class is still missing a method for the TeamUp aspect of the game, so first I am going to try to add that. As mentioned earlier, TeamUp is an event in the game where every player rolls the resource die, and every player whose roll matches that of the player whose turn it is, earns one of that resource for them and the player whose turn it is. This is going to be a little awkward to implement at first, because this relies on some game features that I don't have yet. Initially, I have to create a new instance variable that keeps track of whose turn it is. I added the follow field to my Game class:
 
 ```java
-private int currentPlayer; //Integer representing the Player who's turn it is
+private int currentPlayer; //Integer representing the Player whose turn it is
 ```
