@@ -110,4 +110,21 @@ public class Game {
         int roll = random.nextInt(6) + 1; //Random number 1-6 (inclusive)
         return roll;
     }
+
+    /**
+     * Rolls a virtual dice (1-6) and returns the resource based on roll
+     *
+     * @return resource roll
+     */
+    public String rollResource(){
+        Random random = new Random();
+        int roll = random.nextInt(6) + 1; //Random number 1-6 (inclusive)
+        if (roll <= 3)  //If roll is 1, 2, or 3
+            return "f"; //Return food card
+        else if (roll <= 5) //If roll is 4 or 5
+            return "a";     //Return animal card
+        else            //If roll is 6
+            return "s"; //Return shelter card
+    }
+
 }

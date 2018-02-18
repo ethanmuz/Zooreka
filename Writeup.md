@@ -369,6 +369,11 @@ Also, I need to methods to the server that rolls the dice. The reason that the d
 The dice roll methods will be super simple. The number die method will simply return a random number 1-6 (inclusive). Here is that code:
 
 ```java
+/**
+ * Rolls a virtual dice (1-6) and returns the value
+ *
+ * @return dice roll
+ */
 public int rollDie(){
     Random random = new Random();
     int roll = random.nextInt(6) + 1; //Random number 1-6 (inclusive)
