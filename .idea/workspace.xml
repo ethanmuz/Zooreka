@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dcd90d20-d3a8-4a36-a3af-2df6888f20af" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/Writeup.md" afterPath="$PROJECT_DIR$/Writeup.md" />
-      <change beforePath="$PROJECT_DIR$/src/server/Game.java" afterPath="$PROJECT_DIR$/src/server/Game.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="520">
@@ -25,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Writeup.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Writeup.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Writeup.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="373" column="2" lean-forward="true" selection-start-line="373" selection-start-column="2" selection-end-line="373" selection-end-column="2" />
+            <state relative-caret-position="650">
+              <caret line="401" column="3" lean-forward="false" selection-start-line="401" selection-start-column="3" selection-end-line="401" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -57,8 +56,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/server/Server.java" />
         <option value="$PROJECT_DIR$/src/server/Player.java" />
-        <option value="$PROJECT_DIR$/Writeup.md" />
         <option value="$PROJECT_DIR$/src/server/Game.java" />
+        <option value="$PROJECT_DIR$/Writeup.md" />
       </list>
     </option>
   </component>
@@ -480,18 +479,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Writeup.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="373" column="2" lean-forward="true" selection-start-line="373" selection-start-column="2" selection-end-line="373" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Writeup.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="401" column="3" lean-forward="false" selection-start-line="401" selection-start-column="3" selection-end-line="401" selection-end-column="3" />
           <folding />
         </state>
       </provider>
