@@ -398,3 +398,50 @@ public String rollResource(){
         return "s"; //Return shelter card
 }
 ```
+
+Now that the dice rolls are implemented, I should be able to start the TeamUp method. Here is the pseudocode for how I want to write it:
+
+```
+TeamUp:
+    Current player roll
+    For every other player:
+        Roll
+        If roll = current player roll
+            Add 1 resource to current player
+            Add 1 resource to player
+```
+
+Now here is what my java code ended up being:
+
+```java
+/**
+ * Performs the Team Up action in the game
+ */
+public void teamUp(){
+    String goldenRoll; //Roll that original player rolls
+    String roll; //Roll that current TeamUp roller rolled
+
+    goldenRoll = rollResource(); //TODO: Get current player's roll
+
+    for (Player p : players)
+        if (p != players.get(currentPlayer)) { //Check to make sure the original roller isn't rolling again
+            roll = rollResource(); //TODO: Get roll from player
+            if (goldenRoll.equals(roll)) switch (goldenRoll) {
+                case "f":  //If they both rolled food, give them both a food card
+                    players.get(currentPlayer).changeResources(1, 0, 0, 0);
+                    p.changeResources(1, 0, 0, 0);
+                    break;
+                case "a":  //If they both rolled animal, give them both an animal card
+                    players.get(currentPlayer).changeResources(0, 1, 0, 0);
+                    p.changeResources(0, 1, 0, 0);
+                    break;
+                case "s":  //If they both rolled shelter, give them both a shelter card
+                    players.get(currentPlayer).changeResources(0, 0, 1, 0);
+                    p.changeResources(0, 0, 1, 0);
+                    break;
+            }
+        }
+}
+```
+
+This concludes the work for today, I have most of the Team Up part of the game coded.

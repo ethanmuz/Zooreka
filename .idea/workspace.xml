@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dcd90d20-d3a8-4a36-a3af-2df6888f20af" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/Writeup.md" afterPath="$PROJECT_DIR$/Writeup.md" />
-      <change beforePath="$PROJECT_DIR$/src/server/Game.java" afterPath="$PROJECT_DIR$/src/server/Game.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="Writeup.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Writeup.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="399" column="3" lean-forward="false" selection-start-line="399" selection-start-column="3" selection-end-line="399" selection-end-column="3" />
+            <state relative-caret-position="686">
+              <caret line="446" column="85" lean-forward="true" selection-start-line="399" selection-start-column="3" selection-end-line="446" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -490,8 +489,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Writeup.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="399" column="3" lean-forward="false" selection-start-line="399" selection-start-column="3" selection-end-line="399" selection-end-column="3" />
+        <state relative-caret-position="686">
+          <caret line="446" column="85" lean-forward="true" selection-start-line="399" selection-start-column="3" selection-end-line="446" selection-end-column="85" />
           <folding />
         </state>
       </provider>
