@@ -127,4 +127,32 @@ public class Game {
             return "s"; //Return shelter card
     }
 
+    /**
+     * Performs the Team Up action in the game
+     */
+    public void teamUp(){
+        String goldenRoll; //Roll that original player rolls
+        String roll; //Roll that current TeamUp roller rolled
+
+        goldenRoll = rollResource(); //TODO: Get current player's roll
+
+        for (Player p : players)
+            if (p != players.get(currentPlayer)) { //Check to make sure the original roller isn't rolling again
+                roll = rollResource(); //TODO: Get roll from player
+                if (goldenRoll.equals(roll)) switch (goldenRoll) {
+                    case "f":  //If they both rolled food, give them both a food card
+                        players.get(currentPlayer).changeResources(1, 0, 0, 0);
+                        p.changeResources(1, 0, 0, 0);
+                        break;
+                    case "a":  //If they both rolled animal, give them both an animal card
+                        players.get(currentPlayer).changeResources(0, 1, 0, 0);
+                        p.changeResources(0, 1, 0, 0);
+                        break;
+                    case "s":  //If they both rolled shelter, give them both a shelter card
+                        players.get(currentPlayer).changeResources(0, 0, 1, 0);
+                        p.changeResources(0, 0, 1, 0);
+                        break;
+                }
+            }
+    }
 }

@@ -354,9 +354,7 @@ That's all I wanted to get done tonight. Tomorrow I should work on a couple more
 
 #### February 17-18, 2018
 
-So tonight is a hackathon, so I want to work on this project as much as I can for a while.
-
-Right now I want to implement a feature or two into the Game class, and then set up a communication protocol between the server and client.
+Today I want to implement a feature or two into the Game class, and then maybe set up a communication protocol between the server and client.
 
 The Game class is still missing a method for the TeamUp aspect of the game, so first I am going to try to add that. As mentioned earlier, TeamUp is an event in the game where every player rolls the resource die, and every player whose roll matches that of the player whose turn it is, earns one of that resource for them and the player whose turn it is. This is going to be a little awkward to implement at first, because this relies on some game features that I don't have yet. Initially, I have to create a new instance variable that keeps track of whose turn it is. I added the follow field to my Game class:
 
