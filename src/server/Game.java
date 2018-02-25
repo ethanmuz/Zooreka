@@ -22,9 +22,8 @@ public class Game extends Application {
     private Stage GUIstage; //The stage being used for the GUI
     private Scene scene; //The scene being used to hold the GUI GridPane
     private GridPane gui; //GridPane that will hold the GUI labels/button
-    private ArrayList<Label> playerLabel; //Holds Player labels
+    private ArrayList<Label> playerLabels; //Holds Player labels
     private Button startButton; //Button that starts the game
-
 
     /**
      * Chooses a random Blue Skies card and applies it to the given Player
@@ -65,8 +64,27 @@ public class Game extends Application {
         }
     }
 
+    /**
+     * Starts the GUI for the server
+     *
+     * @param stage The stage that will be shown when starting the GUI
+     */
     public void start(Stage stage){
+        gui = new GridPane();
+        playerLabels = new ArrayList<>();
+        playerLabels.add(new Label("")); //Fill the ArrayList with labels in lieu of possible players
+        playerLabels.add(new Label(""));
+        playerLabels.add(new Label(""));
+        playerLabels.add(new Label(""));
+        startButton = new Button("Start Game");
+        for (Label l : playerLabels)
+            gui.add(l,0,playerLabels.indexOf(l)); //Add Labels to GUI GridPane
+        gui.add(startButton,0,4); //Add start button to GUI GridPane
 
+        //Start GUI
+        scene = new Scene(gui);
+        stage.setScene(scene);
+        stage.show();
     }
 
     /**
