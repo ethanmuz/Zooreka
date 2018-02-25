@@ -459,3 +459,14 @@ I plan for the Server GUI to be very simple. There will just be 4 spots for info
 I don't need a setName(), because the Player's name should never change throughout the game.
 
 Now it is time to start adding the JavaFX code into the Game class. First, I will make sure that the Game class extends Application. When this happens, I have to add a start(Stage) method to the Game class as well.
+
+Next, I am going to create my variables that will be used by the Game's GUI:
+
+```java
+//Server GUI variables:
+private Stage GUIstage; //The stage being used for the GUI
+private Scene scene; //The scene being used to hold the GUI GridPane
+private GridPane gui; //GridPane that will hold the GUI labels/button
+private ArrayList<Label> playerLabels; //Holds Player labels
+private Button startButton; //Button that starts the game
+```
