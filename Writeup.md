@@ -585,3 +585,5 @@ playerLabels.add(new Label("Player 3")); playerLabels.get(3).setTextFill(Color.w
 Now when I run the program, here is the output:
 
 ![GUI with text and colors now for Labels](https://ethanmuz.files.wordpress.com/2018/02/s9.png "GUI with text and colors now for Labels")
+
+There are a couple more things I want to do before I put the coding on pause for a moment. I want to add methods for what should happen when Players join and leave the server.
