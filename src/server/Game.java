@@ -129,6 +129,30 @@ public class Game extends Application {
     }
 
     /**
+     * Removes Player to game
+     *
+     * @param p The Player being removed
+     */
+    public void removePlayer(Player p){
+        players.remove(p); //Removes this Player from players
+        clearPlayerLabel(p); //Updates the GUI's Label for this Player
+        gui.add(playerLabels.get(p.getID()),0, p.getID()); //Re-adds this label to the gui GridPane
+
+        //Start GUI
+        GUIstage.setScene(scene);
+        GUIstage.show();
+    }
+
+    /**
+     * Clears the Label for this Player on the GUI
+     *
+     * @param p the Player whose Label is being cleared
+     */
+    private void clearPlayerLabel(Player p){
+        playerLabels.get(p.getID()).setText("");
+    }
+
+    /**
      * Chooses a random Stormy Weather card and applies it to the given Player
      *
      * @param player Indicates the Player that these cards will be affecting
