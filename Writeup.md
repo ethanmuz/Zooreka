@@ -470,3 +470,39 @@ private GridPane gui; //GridPane that will hold the GUI labels/button
 private ArrayList<Label> playerLabels; //Holds Player labels
 private Button startButton; //Button that starts the game
 ```
+
+Now it is time to begin coding what is in the start(Stage) method for the Game application. This method should do the following commands:
+
+- Initialize the GridPane 'gui' that will be holding all the GUI elements
+- Initialize ArrayList 'playerLabels' that holds all the Labels for Player data in the GUI
+- Fill the playerLabels ArrayList with filler Labels
+- Initialize the start button
+- Add all Player Labels and start Button to the GUI GridPane
+- Start the GUI application
+
+When I implement these into the start(Stage) method, here is the code:
+
+```java
+/**
+ * Starts the GUI for the server
+ *
+ * @param stage The stage that will be shown when starting the GUI
+ */
+public void start(Stage stage){
+    gui = new GridPane();
+    playerLabels = new ArrayList<>();
+    playerLabels.add(new Label("")); //Fill the ArrayList with labels in lieu of possible players
+    playerLabels.add(new Label(""));
+    playerLabels.add(new Label(""));
+    playerLabels.add(new Label(""));
+    startButton = new Button("Start Game");
+    for (Label l : playerLabels)
+        gui.add(l,0,playerLabels.indexOf(l)); //Add Labels to GUI GridPane
+    gui.add(startButton,0,4); //Add start button to GUI GridPane
+
+    //Start GUI
+    scene = new Scene(gui);
+    stage.setScene(scene);
+    stage.show();
+}
+```
