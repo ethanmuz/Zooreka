@@ -552,3 +552,11 @@ public void init(){
     gui.add(startButton,0,4); //Add start button to GUI GridPane
 }
 ```
+
+After running the program again, I get the same error. This is weird this time because I definitely have an init() method. After searching Google, I see that this can be fixed by including a constructor with no parameters in your class. I guess I will try this by adding the following constructor to my code:
+
+```
+public Game(){
+    //Empty constructor, this has to be here
+}
+```
