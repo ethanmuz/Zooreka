@@ -649,3 +649,17 @@ private void clearPlayerLabel(Player p){
     playerLabels.get(p.getID()).setText("");
 }
 ```
+
+Now that these methods are written, there is one last thing I want to do. I noticed that my currentPlayer instance variable for the Game class is an int, which represents the Player's ID, however I think it would be better as a Player object, that holds the Player whose turn it is. So I am going to change that to a Player object. To do this, I also change the TeamUp method so that
+
+```
+players.get(currentPlayer)
+```
+
+is now just
+
+```
+currentPlayer
+```
+
+which is a lot better from a Software Engineering standpoint.
