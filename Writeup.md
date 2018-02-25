@@ -619,3 +619,33 @@ private void updatePlayerLabel(Player p){
     playerLabels.get(p.getID()).setText(p.getName() + " " + p.getID());
 }
 ```
+
+Now I work on the removePlayer method. This should be very similar to the addPlayer method, however the Player is just being removed instead of added (duh).
+
+I also created a clearPlayerLabel method to remove the text from that Player's label on the GUI, while also trying to follow the Law of Demeter. Here is the code for the removePlayer and clearPlayerLabel methods:
+
+```java
+/**
+ * Removes Player to game
+ *
+ * @param p The Player being removed
+ */
+public void removePlayer(Player p){
+    players.remove(p); //Removes this Player from players
+    clearPlayerLabel(p); //Updates the GUI's Label for this Player
+    gui.add(playerLabels.get(p.getID()),0, p.getID()); //Re-adds this label to the gui GridPane
+
+    //Start GUI
+    GUIstage.setScene(scene);
+    GUIstage.show();
+}
+
+/**
+ * Clears the Label for this Player on the GUI
+ *
+ * @param p the Player whose Label is being cleared
+ */
+private void clearPlayerLabel(Player p){
+    playerLabels.get(p.getID()).setText("");
+}
+```
