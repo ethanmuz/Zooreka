@@ -526,3 +526,29 @@ Application launch must not be called more than once
 ```
 
 This probably means that my constructor is running more than once, which doesn't make a lot of sense since I just wrote it and it isn't being called more than once. I might have to pass the command-line arguments through this process, since I'm pretty sure the launch method has them as an argument most of the time. I'll try this and see where we're at.
+
+Now when I run it, here is the error I get:
+
+```
+java.lang.NoSuchMethodException: server.Game.<init>()
+```
+
+Usually, my GUIs have init() methods, which I'm guessing is the reason for this error. It is smart of me to have most of my initialization code in the start method, in the init method instead, anyway. For these reasons, I made the init() method, here is the code now:
+
+```java
+/**
+ * Initializes variables needed for GUI
+ */
+public void init(){
+    gui = new GridPane();
+    playerLabels = new ArrayList<>();
+    playerLabels.add(new Label("")); //Fill the ArrayList with labels in lieu of possible players
+    playerLabels.add(new Label(""));
+    playerLabels.add(new Label(""));
+    playerLabels.add(new Label(""));
+    startButton = new Button("Start Game");
+    for (Label l : playerLabels)
+        gui.add(l,0,playerLabels.indexOf(l)); //Add Labels to GUI GridPane
+    gui.add(startButton,0,4); //Add start button to GUI GridPane
+}
+```
