@@ -32,6 +32,10 @@ public class Game extends Application {
         Application.launch(args); //Launch GUI
     }
 
+    public Game(){
+        //Empty constructor, this has to be here
+    }
+
     /**
      * Chooses a random Blue Skies card and applies it to the given Player
      *
