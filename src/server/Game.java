@@ -105,6 +105,30 @@ public class Game extends Application {
     }
 
     /**
+     * Adds Player to game
+     *
+     * @param p The Player being added
+     */
+    public void addPlayer(Player p){
+        players.add(p); //Adds this Player to players
+        updatePlayerLabel(p); //Updates the GUI's Label for this Player
+        gui.add(playerLabels.get(p.getID()),0, p.getID()); //Re-adds this label to the gui GridPane
+
+        //Start GUI
+        GUIstage.setScene(scene);
+        GUIstage.show();
+    }
+
+    /**
+     * Updates the Label for this Player on the GUI
+     *
+     * @param p the Player whose Label is being updated
+     */
+    private void updatePlayerLabel(Player p){
+        playerLabels.get(p.getID()).setText(p.getName() + " " + p.getID());
+    }
+
+    /**
      * Chooses a random Stormy Weather card and applies it to the given Player
      *
      * @param player Indicates the Player that these cards will be affecting
