@@ -560,3 +560,9 @@ public Game(){
     //Empty constructor, this has to be here
 }
 ```
+
+After I added that empty constructor, I no longer get errors! In fact, I now see what I wanted the whole time: A working GUI. Here is what the GUI looks like when I run the program:
+
+![Initial GUI](https://ethanmuz.files.wordpress.com/2018/02/s8.png "Initial GUI")
+
+This is exactly what it was supposed to look like, too. 4 Spots for Player labels, and one start button.
