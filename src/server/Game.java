@@ -18,7 +18,7 @@ public class Game extends Application {
 
     //Game variables:
     private ArrayList<Player> players; //ArrayList that contains all current Players
-    private int currentPlayer; //Integer representing the Player who's turn it is
+    private Player currentPlayer; //Integer representing the Player who's turn it is
 
     //Server GUI variables:
     private Stage GUIstage; //The stage being used for the GUI
@@ -240,19 +240,19 @@ public class Game extends Application {
         goldenRoll = rollResource(); //TODO: Get current player's roll
 
         for (Player p : players)
-            if (p != players.get(currentPlayer)) { //Check to make sure the original roller isn't rolling again
+            if (p != currentPlayer) { //Check to make sure the original roller isn't rolling again
                 roll = rollResource(); //TODO: Get roll from player
                 if (goldenRoll.equals(roll)) switch (goldenRoll) {
                     case "f":  //If they both rolled food, give them both a food card
-                        players.get(currentPlayer).changeResources(1, 0, 0, 0);
+                        currentPlayer.changeResources(1, 0, 0, 0);
                         p.changeResources(1, 0, 0, 0);
                         break;
                     case "a":  //If they both rolled animal, give them both an animal card
-                        players.get(currentPlayer).changeResources(0, 1, 0, 0);
+                        currentPlayer.changeResources(0, 1, 0, 0);
                         p.changeResources(0, 1, 0, 0);
                         break;
                     case "s":  //If they both rolled shelter, give them both a shelter card
-                        players.get(currentPlayer).changeResources(0, 0, 1, 0);
+                        currentPlayer.changeResources(0, 0, 1, 0);
                         p.changeResources(0, 0, 1, 0);
                         break;
                 }
