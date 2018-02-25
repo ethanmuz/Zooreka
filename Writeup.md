@@ -663,3 +663,5 @@ currentPlayer
 ```
 
 which is a lot better from a Software Engineering standpoint.
+
+I am now going to take a break from this hackathon; if I don't get anything else done, then I'll just pick up where I left off next time.
