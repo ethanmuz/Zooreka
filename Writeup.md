@@ -516,3 +516,13 @@ public class Server {
     }
 }
 ```
+
+Now it is time to run the game for the first time. I will run the Server's main method so that it creates a new Game object, which will then start the GUI.
+
+This did not work. I got an error:
+
+```
+Application launch must not be called more than once
+```
+
+This probably means that my constructor is running more than once, which doesn't make a lot of sense since I just wrote it and it isn't being called more than once. I might have to pass the command-line arguments through this process, since I'm pretty sure the launch method has them as an argument most of the time. I'll try this and see where we're at.
