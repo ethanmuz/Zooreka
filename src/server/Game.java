@@ -72,11 +72,9 @@ public class Game extends Application {
     }
 
     /**
-     * Starts the GUI for the server
-     *
-     * @param stage The stage that will be shown when starting the GUI
+     * Initializes variables needed for GUI
      */
-    public void start(Stage stage){
+    public void init(){
         gui = new GridPane();
         playerLabels = new ArrayList<>();
         playerLabels.add(new Label("")); //Fill the ArrayList with labels in lieu of possible players
@@ -87,8 +85,14 @@ public class Game extends Application {
         for (Label l : playerLabels)
             gui.add(l,0,playerLabels.indexOf(l)); //Add Labels to GUI GridPane
         gui.add(startButton,0,4); //Add start button to GUI GridPane
+    }
 
-        //Start GUI
+    /**
+     * Starts the GUI for the server
+     *
+     * @param stage The stage that will be shown when starting the GUI
+     */
+    public void start(Stage stage){
         scene = new Scene(gui);
         stage.setScene(scene);
         stage.show();
