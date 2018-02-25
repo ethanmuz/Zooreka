@@ -26,6 +26,13 @@ public class Game extends Application {
     private Button startButton; //Button that starts the game
 
     /**
+     * Game constructor
+     */
+    public Game(String[] args){
+        Application.launch(args); //Launch GUI
+    }
+
+    /**
      * Chooses a random Blue Skies card and applies it to the given Player
      *
      * @param player Indicates the Player that these cards will be affecting

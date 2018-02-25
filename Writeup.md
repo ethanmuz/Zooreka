@@ -512,7 +512,7 @@ I would like to test if this works so I need to do some things to make sure I am
 ```java
 public class Server {
     public static void main(String[] args) {
-        Game game = new Game();
+        Game game = new Game(); //Start game
     }
 }
 ```
