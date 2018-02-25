@@ -445,3 +445,15 @@ public void teamUp(){
 ```
 
 This concludes the work for today, I have most of the Team Up part of the game coded.
+
+#### February 24-25, 2018
+
+My plan for tonight's hackathon is to begin with a GUI for the server. I want to have the game server to have a GUI while the game is running so that the computer hosting the server can see current players and have control over when the game starts.
+
+I plan for the Server GUI to be very simple. There will just be 4 spots for information on the players currently playing, and then a "start game" button right below. The player information would be the player's name, ID number, and color they are in the game. Previously, I didn't plan on the Players having names, so this is something I have to add to the Player class. I did the following to add the name variable to the Player class:
+
+- Add 'name' instance variable
+- Add 'name' variable to constructor parameters, add set name field to that value
+- Add getName() method to return the name
+
+I don't need a setName(), because the Player's name should never change throughout the game.

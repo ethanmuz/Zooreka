@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcd90d20-d3a8-4a36-a3af-2df6888f20af" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Writeup.md" afterPath="$PROJECT_DIR$/Writeup.md" />
-      <change beforePath="$PROJECT_DIR$/src/server/Game.java" afterPath="$PROJECT_DIR$/src/server/Game.java" />
-      <change beforePath="$PROJECT_DIR$/src/server/Player.java" afterPath="$PROJECT_DIR$/src/server/Player.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Writeup.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Writeup.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Writeup.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6372">
-              <caret line="354" column="16" lean-forward="false" selection-start-line="354" selection-start-column="16" selection-end-line="354" selection-end-column="16" />
+            <state relative-caret-position="582">
+              <caret line="457" column="0" lean-forward="true" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="718">
@@ -101,9 +98,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/server/Server.java" />
-        <option value="$PROJECT_DIR$/Writeup.md" />
         <option value="$PROJECT_DIR$/src/server/Game.java" />
         <option value="$PROJECT_DIR$/src/server/Player.java" />
+        <option value="$PROJECT_DIR$/Writeup.md" />
       </list>
     </option>
   </component>
@@ -577,14 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Writeup.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6372">
-          <caret line="354" column="16" lean-forward="false" selection-start-line="354" selection-start-column="16" selection-end-line="354" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-722">
@@ -631,6 +620,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Writeup.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="457" column="0" lean-forward="true" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
