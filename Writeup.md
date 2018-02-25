@@ -587,3 +587,35 @@ Now when I run the program, here is the output:
 ![GUI with text and colors now for Labels](https://ethanmuz.files.wordpress.com/2018/02/s9.png "GUI with text and colors now for Labels")
 
 There are a couple more things I want to do before I put the coding on pause for a moment. I want to add methods for what should happen when Players join and leave the server.
+
+When a Player joins the server, I want it to create a new Player object and add it to the players ArrayList. Also, I want it to take the Player's name and ID and change the appropriate Label to that information. Then, it will re-add the Label to the gui GridPane. After this, it will set the scene and show the stage again, to update the server's view.
+
+When I was writing this code, I realized that when I changed the information on the Player's Label, it was a super long line with functions called upon functions, which breaks the Law of Demeter. Instead, I created a new function for that command to make it easier to understand when reading the addPlayer method.
+
+Here is the code for the addPlayer and updatePlayerLabel methods:
+
+```java
+/**
+ * Adds Player to game
+ *
+ * @param p The Player being added
+ */
+public void addPlayer(Player p){
+    players.add(p); //Adds this Player to players
+    updatePlayerLabel(p); //Updates the GUI's Label for this Player
+    gui.add(playerLabels.get(p.getID()),0, p.getID()); //Re-adds this label to the gui GridPane
+
+    //Start GUI
+    GUIstage.setScene(scene);
+    GUIstage.show();
+}
+
+/**
+ * Updates the Label for this Player on the GUI
+ *
+ * @param p the Player whose Label is being updated
+ */
+private void updatePlayerLabel(Player p){
+    playerLabels.get(p.getID()).setText(p.getName() + " " + p.getID());
+}
+```
