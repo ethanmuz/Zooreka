@@ -566,3 +566,18 @@ After I added that empty constructor, I no longer get errors! In fact, I now see
 ![Initial GUI](https://ethanmuz.files.wordpress.com/2018/02/s8.png "Initial GUI")
 
 This is exactly what it was supposed to look like, too. 4 Spots for Player labels, and one start button.
+
+I know that you can't see any text for the labels, so I can add text for them. I also want to change the color of the text for each player so it matches their Player color. I have no idea how to do this, but a Google search yields the method I need to call on the label to change the text color:
+
+```java
+setTextFill(Color.web("hex value"));
+```
+
+Once I add the colors to the labels, here is what the code looks like in the init() method:
+
+```java
+playerLabels.add(new Label("Player 0")); playerLabels.get(0).setTextFill(Color.web("#ff0000")); //Fill the ArrayList with labels in lieu of possible players
+playerLabels.add(new Label("Player 1")); playerLabels.get(1).setTextFill(Color.web("#0000ff"));
+playerLabels.add(new Label("Player 2")); playerLabels.get(2).setTextFill(Color.web("#ffff00"));
+playerLabels.add(new Label("Player 3")); playerLabels.get(3).setTextFill(Color.web("#00ff00"));
+```
