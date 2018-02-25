@@ -581,3 +581,7 @@ playerLabels.add(new Label("Player 1")); playerLabels.get(1).setTextFill(Color.w
 playerLabels.add(new Label("Player 2")); playerLabels.get(2).setTextFill(Color.web("#ffff00"));
 playerLabels.add(new Label("Player 3")); playerLabels.get(3).setTextFill(Color.web("#00ff00"));
 ```
+
+Now when I run the program, here is the output:
+
+![GUI with text and colors now for Labels](https://ethanmuz.files.wordpress.com/2018/02/s9.png "GUI with text and colors now for Labels")
