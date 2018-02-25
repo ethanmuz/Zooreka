@@ -457,3 +457,5 @@ I plan for the Server GUI to be very simple. There will just be 4 spots for info
 - Add getName() method to return the name
 
 I don't need a setName(), because the Player's name should never change throughout the game.
+
+Now it is time to start adding the JavaFX code into the Game class. First, I will make sure that the Game class extends Application. When this happens, I have to add a start(Stage) method to the Game class as well.
