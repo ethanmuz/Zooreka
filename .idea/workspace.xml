@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcd90d20-d3a8-4a36-a3af-2df6888f20af" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Writeup.md" afterPath="$PROJECT_DIR$/Writeup.md" />
+      <change beforePath="$PROJECT_DIR$/src/server/Game.java" afterPath="$PROJECT_DIR$/src/server/Game.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,10 +14,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Writeup.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Writeup.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Writeup.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="624">
               <caret line="567" column="104" lean-forward="false" selection-start-line="567" selection-start-column="104" selection-end-line="567" selection-end-column="104" />
               <folding />
             </state>
@@ -65,15 +65,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="85" column="8" lean-forward="true" selection-start-line="85" selection-start-column="8" selection-end-line="88" selection-end-column="103" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#981#982#0" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1100#1101#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,8 +114,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/server/Player.java" />
         <option value="$PROJECT_DIR$/src/server/Server.java" />
-        <option value="$PROJECT_DIR$/src/server/Game.java" />
         <option value="$PROJECT_DIR$/Writeup.md" />
+        <option value="$PROJECT_DIR$/src/server/Game.java" />
       </list>
     </option>
   </component>
@@ -311,8 +311,8 @@
           <caret line="121" column="35" lean-forward="false" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -362,8 +362,8 @@
           <caret line="151" column="23" lean-forward="true" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -421,8 +421,8 @@
           <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="93" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -480,8 +480,8 @@
           <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="93" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -629,6 +629,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Writeup.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="567" column="104" lean-forward="false" selection-start-line="567" selection-start-column="104" selection-end-line="567" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-216">
@@ -670,21 +678,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="85" column="8" lean-forward="true" selection-start-line="85" selection-start-column="8" selection-end-line="88" selection-end-column="103" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Writeup.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="567" column="104" lean-forward="false" selection-start-line="567" selection-start-column="104" selection-end-line="567" selection-end-column="104" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -5,6 +5,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
 import java.util.*;
@@ -81,10 +83,10 @@ public class Game extends Application {
     public void init(){
         gui = new GridPane();
         playerLabels = new ArrayList<>();
-        playerLabels.add(new Label("")); //Fill the ArrayList with labels in lieu of possible players
-        playerLabels.add(new Label(""));
-        playerLabels.add(new Label(""));
-        playerLabels.add(new Label(""));
+        playerLabels.add(new Label("Player 0")); playerLabels.get(0).setTextFill(Color.web("#ff0000")); //Fill the ArrayList with labels in lieu of possible players
+        playerLabels.add(new Label("Player 1")); playerLabels.get(1).setTextFill(Color.web("#0000ff"));
+        playerLabels.add(new Label("Player 2")); playerLabels.get(2).setTextFill(Color.web("#ffff00"));
+        playerLabels.add(new Label("Player 3")); playerLabels.get(3).setTextFill(Color.web("#00ff00"));
         startButton = new Button("Start Game");
         for (Label l : playerLabels)
             gui.add(l,0,playerLabels.indexOf(l)); //Add Labels to GUI GridPane
