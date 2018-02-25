@@ -1,6 +1,10 @@
 package server;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.util.*;
@@ -10,8 +14,17 @@ import java.util.*;
  */
 public class Game extends Application {
 
+    //Game variables:
     private ArrayList<Player> players; //ArrayList that contains all current Players
     private int currentPlayer; //Integer representing the Player who's turn it is
+
+    //Server GUI variables:
+    private Stage GUIstage; //The stage being used for the GUI
+    private Scene scene; //The scene being used to hold the GUI GridPane
+    private GridPane gui; //GridPane that will hold the GUI labels/button
+    private ArrayList<Label> playerLabel; //Holds Player labels
+    private Button startButton; //Button that starts the game
+
 
     /**
      * Chooses a random Blue Skies card and applies it to the given Player
@@ -52,7 +65,7 @@ public class Game extends Application {
         }
     }
 
-    public void start(Stage i){
+    public void start(Stage stage){
 
     }
 
