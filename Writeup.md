@@ -506,3 +506,13 @@ public void start(Stage stage){
     stage.show();
 }
 ```
+
+I would like to test if this works so I need to do some things to make sure I am able to test it. I need to make a new class with a main method so I can create a new Game object that will run the server's GUI. This class will be called Server, and it's only purpose will be to create a new Game object to run the server:
+
+```java
+public class Server {
+    public static void main(String[] args) {
+        Game game = new Game();
+    }
+}
+```
