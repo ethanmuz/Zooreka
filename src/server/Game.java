@@ -1,11 +1,14 @@
 package server;
 
+import javafx.application.Application;
+import javafx.stage.Stage;
+
 import java.util.*;
 
 /**
  * @author Ethan Uzarowski ethanmuz@gmail.com github.com/ethanmuz
  */
-public class Game {
+public class Game extends Application {
 
     private ArrayList<Player> players; //ArrayList that contains all current Players
     private int currentPlayer; //Integer representing the Player who's turn it is
@@ -47,6 +50,10 @@ public class Game {
                 player.changeResources(3, 0, 0, 0); //Player's Blue Skies card gives them three food cards
                 break;
         }
+    }
+
+    public void start(Stage i){
+
     }
 
     /**

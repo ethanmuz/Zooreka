@@ -352,7 +352,7 @@ public void luckyDay(Player player, String selection) {
 
 That's all I wanted to get done tonight. Tomorrow I should work on a couple more game features, and I might start implementing the protocol that the server and client will use to communicate with each other.
 
-#### February 17-18, 2018
+#### February 17, 2018
 
 Today I want to implement a feature or two into the Game class, and then maybe set up a communication protocol between the server and client.
 

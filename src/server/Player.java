@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Player {
 
-    //String playerColor; //???
+    private String name;
     private int foodCards; //Number of food cards this player possesses
     private int animalCards; //Number of animal cards this player possesses
     private int shelterCards; //Number of shelter cards this player has
@@ -23,7 +23,8 @@ public class Player {
      *
      * @param id Server tells this Player what its Player ID number is
      */
-    public Player(int id) {
+    public Player(String name, int id) {
+        this.name = name;
         this.playerID = id; //Assign player ID to the ID passed in by server
         this.foodCards = 2; //The rules say each player starts with 2 food cards
         this.animalCards = 1; //The rules say each player starts with 1 animal card
@@ -131,6 +132,11 @@ public class Player {
     //Sets player ID; only use when player leaves game lobby
     public void setPlayerID(int id) {
         this.playerID = id;
+    }
+
+    //Returns this Player's name
+    public String getName(){
+        return this.name;
     }
 
 }
