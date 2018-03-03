@@ -728,7 +728,7 @@ Here is the code for the trading post trades, very simple:
     }
 ```
 
-Today, I finally want to begin to implement the protocol for communication between the server and client. The initial plan is to send Strings over a socket using a PrintWriter and BufferedReader. The protocol used will be the following:
+Now, I finally want to begin to implement the protocol for communication between the server and client. The initial plan is to send Strings over a socket using a PrintWriter and BufferedReader. The protocol used will be the following:
 
 - "[player number] roll": player rolls
 - "[player number] roll [number dice] [resource dice] [players who got the resource]": result of player roll
