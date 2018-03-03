@@ -742,3 +742,5 @@ Now, I finally want to begin to implement the protocol for communication between
 - "[player number] ST [selected resource] [selected lucky day resource]": player changes selection token
 
 Those are all the possible messages needed to be sent from client to server and vice versa (that I can think of right now; any more needed will be added to this list).
+
+Now, I want to start to incorporate the Sockets and ServerSockets into my game. I don't remember everything about networking in Java, so I'm using [Oracle's Server Socket documentation](https://docs.oracle.com/javase/tutorial/networking/sockets/clientServer.html) for right now.
