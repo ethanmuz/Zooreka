@@ -9,6 +9,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.ServerSocket;
 import java.util.*;
 
 /**
@@ -27,14 +29,18 @@ public class Game extends Application {
     private ArrayList<Label> playerLabels; //Holds Player labels
     private Button startButton; //Button that starts the game
 
+    //Server networking variables:
+    private final int PORT = 61783;
+    private ServerSocket serverSocket = new ServerSocket(PORT);
+
     /**
      * Game constructor
      */
-    public Game(String[] args){
+    public Game(String[] args) throws IOException {
         Application.launch(args); //Launch GUI
     }
 
-    public Game(){
+    public Game() throws IOException {
         //Empty constructor, this has to be here
     }
 
