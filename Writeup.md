@@ -727,3 +727,18 @@ Here is the code for the trading post trades, very simple:
         player.changeResources(4,2,1,-1);
     }
 ```
+
+Today, I finally want to begin to implement the protocol for communication between the server and client. The initial plan is to send Strings over a socket using a PrintWriter and BufferedReader. The protocol used will be the following:
+
+- "[player number] roll": player rolls
+- "[player number] roll [number dice] [resource dice] [players who got the resource]": result of player roll
+- "[player number] [spot landed on]": spot the player landed on
+- "[player number] BS [number of food cards] [number of animal cards] [number of shelter cards]": player lands on Blue Skies with number of food, animal, and shelter cards to gain
+- "[player number] SW [number of food cards] [number of animal cards] [number of shelter cards]": player lands on Stormy Weather with number of food, animal, and shelter cards to lose
+- "[player number] TP [selling] [buying]": player trading at trading post
+- "[player number] LD [lucky day selection]": player lands on lucky day and makes selection
+- "[player number] TU [resource roll]": player lands on TeamUp and rolls resource die, or if there is already a TeamUp in progress, the player just sends their roll
+- "[player number] KC": player used keeper card
+- "[player number] ST [selected resource] [selected lucky day resource]": player changes selection token
+
+Those are all the possible messages needed to be sent from client to server and vice versa (that I can think of right now; any more needed will be added to this list).
