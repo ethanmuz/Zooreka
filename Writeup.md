@@ -665,3 +665,65 @@ currentPlayer
 which is a lot better from a Software Engineering standpoint.
 
 I am now going to take a break from this hackathon; if I don't get anything else done, then I'll just pick up where I left off next time.
+
+#### March 2, 2018
+
+Today, I want to implement the trading post into the game. Basically there will just be methods that change the resources that a player has based on what they want to trade.
+
+Here is the code for the trading post trades, very simple:
+
+```java
+    /**
+     * Player trades three food cards for an animal card
+     *
+     * @param player The player who is trading
+     */
+    public void buyAnimal(Player player){
+        player.changeResources(-3,1,0,0);
+    }
+
+    /**
+     * Player trades one animal card for an three food cards
+     *
+     * @param player The player who is trading
+     */
+    public void sellAnimal(Player player){
+        player.changeResources(3,-1,0,0);
+    }
+
+    /**
+     * Player trades two animal cards for a shelter card
+     *
+     * @param player The player who is trading
+     */
+    public void buyShelter(Player player){
+        player.changeResources(0,-2,1,0);
+    }
+
+    /**
+     * Player trades a shelter card for 2 animals card
+     *
+     * @param player The player who is trading
+     */
+    public void sellShelter(Player player){
+        player.changeResources(0,2,-1,0);
+    }
+
+    /**
+     * Player trades four food cards, two animal cards, and a shelter card for a habitat
+     *
+     * @param player The player who is trading
+     */
+    public void buyHabitat(Player player){
+        player.changeResources(-4,-2,-1,1);
+    }
+
+    /**
+     * Player trades a habitat for our food cards, two animal cards, and a shelter card
+     *
+     * @param player The player who is trading
+     */
+    public void sellHabitat(Player player){
+        player.changeResources(4,2,1,-1);
+    }
+```
