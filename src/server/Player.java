@@ -1,5 +1,8 @@
 package server;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.util.ArrayList;
 
 /**
@@ -17,6 +20,11 @@ public class Player {
     private String luckySelection; //Resource selected with lucky token
     private boolean luckyDay; //Whether or not it is this player's "lucky day", that is whether or not they possess the lucky token.
     private int playerID; //Player number used for ID purposes
+
+    //Networking fields:
+    private Socket socket; //Socket connected to server
+    private PrintWriter out; //Output
+    private BufferedReader in; //Input
 
     /**
      * Constructor for Player
@@ -139,4 +147,18 @@ public class Player {
         return this.name;
     }
 
+    //Sets the socket connected to the server
+    public void setSocket(Socket socket){
+        this.socket = socket;
+    }
+
+    //Sets the PrintWriter associated with this Player
+    public void setPrintWriter(PrintWriter pw){
+        this.out = pw;
+    }
+
+    //Sets the PrintWriter associated with this Player
+    public void setBufferedReader(BufferedReader br){
+        this.in = br;
+    }
 }

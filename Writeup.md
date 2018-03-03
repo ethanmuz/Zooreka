@@ -502,8 +502,8 @@ public void start(Stage stage){
 
     //Start GUI
     scene = new Scene(gui);
-    stage.setScene(scene);
-    stage.show();
+    GUIstage.setScene(scene);
+    GUIstage.show();
 }
 ```
 

@@ -37,6 +37,7 @@ public class Game extends Application {
      * Game constructor
      */
     public Game(String[] args) throws IOException {
+        GUIstage = new Stage();
         Application.launch(args); //Launch GUI
     }
 
@@ -106,8 +107,8 @@ public class Game extends Application {
      */
     public void start(Stage stage){
         scene = new Scene(gui);
-        stage.setScene(scene);
-        stage.show();
+        GUIstage.setScene(scene);
+        GUIstage.show();
     }
 
     /**
