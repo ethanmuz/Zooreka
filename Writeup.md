@@ -754,3 +754,7 @@ private ServerSocket serverSocket = new ServerSocket(PORT);
 ```
 
 This will be continued later.
+
+Tomorrow:::::
+
+Today, I want to be able to accept new connections and then assign a PrintWriter and BufferedReader to this connection, and this will be a new Player. To do this, I first have to add a PrintWriter and BufferedReader as fields for the Player class.

@@ -31,7 +31,7 @@ public class Player {
      *
      * @param id Server tells this Player what its Player ID number is
      */
-    public Player(String name, int id) {
+    public Player(String name, int id, Socket socket, BufferedReader br, PrintWriter pw) {
         this.name = name;
         this.playerID = id; //Assign player ID to the ID passed in by server
         this.foodCards = 2; //The rules say each player starts with 2 food cards
@@ -41,6 +41,9 @@ public class Player {
         this.keeperCards = 0;  //No player starts with keeper cards
         this.luckyDay = false;
         this.luckySelection = null;  //No player starts with Lucky Day
+        this.socket = socket;
+        this.out = pw;
+        this.in = br;
 
     }
 
@@ -145,20 +148,5 @@ public class Player {
     //Returns this Player's name
     public String getName(){
         return this.name;
-    }
-
-    //Sets the socket connected to the server
-    public void setSocket(Socket socket){
-        this.socket = socket;
-    }
-
-    //Sets the PrintWriter associated with this Player
-    public void setPrintWriter(PrintWriter pw){
-        this.out = pw;
-    }
-
-    //Sets the PrintWriter associated with this Player
-    public void setBufferedReader(BufferedReader br){
-        this.in = br;
     }
 }

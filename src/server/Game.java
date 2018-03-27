@@ -1,6 +1,8 @@
 package server;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,8 +11,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.*;
 
 /**
@@ -23,21 +29,21 @@ public class Game extends Application {
     private Player currentPlayer; //Integer representing the Player who's turn it is
 
     //Server GUI variables:
-    private Stage GUIstage; //The stage being used for the GUI
-    private Scene scene; //The scene being used to hold the GUI GridPane
+    Stage stage;
+    Scene scene;
     private GridPane gui; //GridPane that will hold the GUI labels/button
     private ArrayList<Label> playerLabels; //Holds Player labels
     private Button startButton; //Button that starts the game
 
     //Server networking variables:
-    private final int PORT = 61783;
-    private ServerSocket serverSocket = new ServerSocket(PORT);
+    private final int PORT = 54329;
+    private ServerSocket serverSocket;
 
     /**
      * Game constructor
      */
     public Game(String[] args) throws IOException {
-        GUIstage = new Stage();
+        serverSocket = new ServerSocket(PORT);
         Application.launch(args); //Launch GUI
     }
 
@@ -95,20 +101,33 @@ public class Game extends Application {
         playerLabels.add(new Label("Player 2")); playerLabels.get(2).setTextFill(Color.web("#ffff00"));
         playerLabels.add(new Label("Player 3")); playerLabels.get(3).setTextFill(Color.web("#00ff00"));
         startButton = new Button("Start Game");
+        startButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                startButton.setText("fds");
+            }
+        });
         for (Label l : playerLabels)
             gui.add(l,0,playerLabels.indexOf(l)); //Add Labels to GUI GridPane
         gui.add(startButton,0,4); //Add start button to GUI GridPane
+        startButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                startButton.setText("Game will start");
+            }
+        });
     }
 
     /**
      * Starts the GUI for the server
      *
-     * @param stage The stage that will be shown when starting the GUI
+     * @param s The stage that will be shown when starting the GUI
      */
-    public void start(Stage stage){
+    public void start(Stage s){
         scene = new Scene(gui);
-        GUIstage.setScene(scene);
-        GUIstage.show();
+        stage = s;
+        stage.setScene(scene);
+        stage.show();
     }
 
     /**
@@ -122,8 +141,8 @@ public class Game extends Application {
         gui.add(playerLabels.get(p.getID()),0, p.getID()); //Re-adds this label to the gui GridPane
 
         //Start GUI
-        GUIstage.setScene(scene);
-        GUIstage.show();
+        stage.setScene(scene);
+        stage.show();
     }
 
     /**
@@ -146,8 +165,8 @@ public class Game extends Application {
         gui.add(playerLabels.get(p.getID()),0, p.getID()); //Re-adds this label to the gui GridPane
 
         //Start GUI
-        GUIstage.setScene(scene);
-        GUIstage.show();
+        stage.setScene(scene);
+        stage.show();
     }
 
     /**
@@ -318,5 +337,19 @@ public class Game extends Application {
      */
     public void sellHabitat(Player player){
         player.changeResources(4,2,1,-1);
+    }
+
+    /**
+     * Adds players who connect to the game
+     */
+    public void addPlayers() throws IOException {
+        while (players.size()<4){
+            Socket client = serverSocket.accept();
+            PrintWriter out = new PrintWriter(client.getOutputStream(), true);
+            BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            String name = in.readLine();
+            Player p = new Player(name, players.size(), client, in, out);
+            addPlayer(p);
+        }
     }
 }
