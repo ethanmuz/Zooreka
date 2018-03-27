@@ -37,13 +37,14 @@ public class Game extends Application {
 
     //Server networking variables:
     private final int PORT = 54329;
-    private ServerSocket serverSocket;
+    private ServerSocket[] serverSockets;
 
     /**
      * Game constructor
      */
     public Game(String[] args) throws IOException {
-        serverSocket = new ServerSocket(PORT);
+        players = new ArrayList<>();
+        serverSockets = new ServerSocket[4];
         Application.launch(args); //Launch GUI
     }
 
@@ -344,7 +345,8 @@ public class Game extends Application {
      */
     public void addPlayers() throws IOException {
         while (players.size()<4){
-            Socket client = serverSocket.accept();
+            serverSockets[players.size()] = new ServerSocket(PORT+players.size());
+            Socket client = serverSockets[players.size()].accept();
             PrintWriter out = new PrintWriter(client.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
             String name = in.readLine();
